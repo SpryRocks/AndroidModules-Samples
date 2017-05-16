@@ -9,6 +9,13 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+
+        // If you have different applicationIds for buildTypes or productFlavors uncomment this block.
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["resourcePackageName": "com.spryrocks.imgsearch.presentation"]
+            }
+        }
     }
     buildTypes {
         release {
@@ -24,4 +31,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
 
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+
+    annotationProcessor "org.androidannotations:androidannotations:4.3.0"
+    compile "org.androidannotations:androidannotations-api:4.3.0"
 }
