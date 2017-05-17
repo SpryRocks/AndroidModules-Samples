@@ -5,11 +5,16 @@ import com.spryrocks.imgsearch.presentation.ui.screens.BaseFragment;
 
 import org.androidannotations.annotations.EFragment;
 
+import javax.inject.Inject;
+
 @EFragment(R.layout.fragment_search)
 public class SearchFragment extends BaseFragment implements ISearchView {
-    private final ISearchPresenter presenter;
+    @Inject
+    protected ISearchPresenter presenter;
 
     public SearchFragment() {
-        presenter = presenterCollection.registerPresenter(new SearchPresenter(), (ISearchView) this);
+        DaggerSearchComponent.create().inject(this);
+
+        presenterCollection.registerPresenter(presenter, (ISearchView) this);
     }
 }
