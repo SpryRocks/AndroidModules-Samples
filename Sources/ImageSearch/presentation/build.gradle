@@ -29,6 +29,7 @@ repositories {
 }
 
 dependencies {
+    implementation project(':data')
     implementation project(':domain')
 
     implementation 'com.android.support:appcompat-v7:25.3.1'
