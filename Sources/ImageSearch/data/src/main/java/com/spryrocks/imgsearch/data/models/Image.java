@@ -1,5 +1,11 @@
 package com.spryrocks.imgsearch.data.models;
 
 public class Image {
-    // TODO: 18.05.2017 add fields
+    public final String title;
+    public final String url;
+
+    public Image(String title, String url) {
+        this.title = title;
+        this.url = url;
+    }
 }

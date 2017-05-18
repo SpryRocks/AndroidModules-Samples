@@ -13,7 +13,7 @@ public class BaseFragment extends com.spryrocks.android.modules.ui.BaseFragment 
         handleError(error);
     }
 
-    protected void handleError(Throwable error) {
+    public void handleError(Throwable error) {
         BaseActivity activity = (BaseActivity) getActivity();
         activity.handleError(error);
     }
