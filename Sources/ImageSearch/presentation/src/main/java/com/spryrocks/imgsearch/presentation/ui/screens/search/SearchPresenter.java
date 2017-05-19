@@ -2,20 +2,15 @@ package com.spryrocks.imgsearch.presentation.ui.screens.search;
 
 import com.spryrocks.android.modules.ui.mvp.v1.ui.PresenterBase;
 import com.spryrocks.imgsearch.domain.interactors.ISearchInteractor;
-import com.spryrocks.imgsearch.domain.interactors.InterractorsModule;
-
-import javax.inject.Inject;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
 class SearchPresenter extends PresenterBase<ISearchView> implements ISearchPresenter {
-    @Inject
-    ISearchInteractor searchInteractor; // TODO: 18.05.2017 use manager, handle lifecycle, cancel preview requests
+    private final ISearchInteractor searchInteractor; // TODO: 18.05.2017 use manager, handle lifecycle, cancel preview requests
 
-    SearchPresenter() {
-        DaggerSearchComponent.builder().interractorsModule(new InterractorsModule())
-                .build().inject(this);
+    SearchPresenter(ISearchInteractor searchInteractor) {
+        this.searchInteractor = searchInteractor;
     }
 
     @Override

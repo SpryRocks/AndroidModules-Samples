@@ -1,4 +1,4 @@
-package com.spryrocks.imgsearch.domain.interactors.concrete;
+package com.spryrocks.imgsearch.domain.interactors;
 
 import com.spryrocks.imgsearch.data.models.Image;
 import com.spryrocks.imgsearch.domain.interactors.ISearchInteractor;
@@ -8,7 +8,7 @@ import java.util.Collection;
 
 import io.reactivex.Observable;
 
-public class SearchInteractor implements ISearchInteractor {
+class SearchInteractor implements ISearchInteractor {
     @Override
     public Observable<Collection<Image>> searchImages(String searchQuery) {
         // TODO: 18.05.2017 remove test data, implement
