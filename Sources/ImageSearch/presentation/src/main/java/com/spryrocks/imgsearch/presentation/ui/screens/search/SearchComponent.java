@@ -15,8 +15,6 @@ public interface SearchComponent {
     static SearchComponent create(Context context) {
         return DaggerSearchComponent.builder()
                 .searchModule(new SearchModule(context))
-                .interactorsModule(new InteractorsModule())
-                .apiModule(new ApiModule())
                 .appModule(new AppModule(context))
                 .build();
     }
