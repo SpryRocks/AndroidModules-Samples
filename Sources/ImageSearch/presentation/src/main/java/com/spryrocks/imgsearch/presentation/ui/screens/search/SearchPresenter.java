@@ -2,6 +2,7 @@ package com.spryrocks.imgsearch.presentation.ui.screens.search;
 
 import com.spryrocks.android.modules.ui.mvp.v1.ui.PresenterBase;
 import com.spryrocks.imgsearch.domain.interactors.ISearchInteractor;
+import com.spryrocks.imgsearch.domain.interactors.InterractorsModule;
 
 import javax.inject.Inject;
 
@@ -13,14 +14,15 @@ class SearchPresenter extends PresenterBase<ISearchView> implements ISearchPrese
     ISearchInteractor searchInteractor; // TODO: 18.05.2017 use manager, handle lifecycle, cancel preview requests
 
     SearchPresenter() {
-        DaggerSearchComponent.create().inject(this);
+        DaggerSearchComponent.builder().interractorsModule(new InterractorsModule())
+                .build().inject(this);
     }
 
     @Override
     public void search() {
         String searchQuery = getView().getSearchQuery();
 
-        searchInteractor.searchImages(searchQuery)
+        searchInteractor.searchImages(searchQuery) // TODO: 19.05.2017 attach to lifecycle
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(getView()::showImages,
