@@ -39,9 +39,7 @@ public class SearchFragment extends BaseFragment implements ISearchView {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        DaggerSearchUiComponent.builder()
-                .searchUiModule(new SearchUiModule(getContext()))
-                .build().inject(this);
+        SearchComponent.create(getContext()).inject(this);
 
         presenterCollection.registerPresenter(presenter, this);
 

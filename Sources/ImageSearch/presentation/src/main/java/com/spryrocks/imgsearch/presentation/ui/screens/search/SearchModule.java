@@ -2,22 +2,23 @@ package com.spryrocks.imgsearch.presentation.ui.screens.search;
 
 import android.content.Context;
 
+import com.spryrocks.imgsearch.domain.interactors.ISearchInteractor;
 import com.spryrocks.imgsearch.presentation.ui.adapters.ImagesAdapter;
 
 import dagger.Module;
 import dagger.Provides;
 
 @Module
-class SearchUiModule {
+class SearchModule {
     private final Context context;
 
-    SearchUiModule(Context context) {
+    SearchModule(Context context) {
         this.context = context;
     }
 
     @Provides
-    ISearchPresenter provideSearchPresenter() {
-        return new SearchPresenter();
+    ISearchPresenter provideSearchPresenter(ISearchInteractor searchInteractor) {
+        return new SearchPresenter(searchInteractor);
     }
 
     @Provides
