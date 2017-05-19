@@ -1,9 +1,12 @@
 package com.spryrocks.imgsearch.data.api.google;
 
+import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-public interface RestApi {
-    @GET("https://www.googleapis.com/customsearch/v1")
-    void search(@Query("key") String key, @Query("cx") String cx, @Query("q") String q);
+interface RestApi {
+    @GET("customsearch/v1")
+    Observable<CustomSearchResponse> search(@Query("key") String key, @Query("cx") String cx,
+                                            @Query("searchType") String searchType,
+                                            @Query("q") String q);
 }

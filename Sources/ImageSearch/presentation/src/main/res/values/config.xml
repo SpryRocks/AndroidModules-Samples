@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Config_GoogleCustomSearchApi_Key" translatable="false">AIzaSyC6cu2LlebP9mYuLyhKCrz4rTZawzol4ZE</string>
+    <string name="Config_GoogleCustomSearchApi_Cx" translatable="false">015622587654039283002:iss69ucw17y</string>
+</resources>

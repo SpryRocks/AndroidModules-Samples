@@ -1,4 +1,4 @@
-package com.spryrocks.imgsearch.domain.interactors;
+package com.spryrocks.imgsearch.data.api.google;
 
 import com.spryrocks.imgsearch.data.models.Image;
 
@@ -6,6 +6,6 @@ import java.util.Collection;
 
 import io.reactivex.Observable;
 
-public interface ISearchInteractor {
+public interface ICustomSearchService {
     Observable<Collection<Image>> searchImages(String query);
 }

@@ -1,12 +1,14 @@
 package com.spryrocks.imgsearch.domain.interactors;
 
+import com.spryrocks.imgsearch.data.api.google.ICustomSearchService;
+
 import dagger.Module;
 import dagger.Provides;
 
 @Module
 public class InteractorsModule {
     @Provides
-    ISearchInteractor provideSearchInteractor() {
-        return new SearchInteractor();
+    ISearchInteractor provideSearchInteractor(ICustomSearchService customSearchApiService) {
+        return new SearchInteractor(customSearchApiService);
     }
 }
