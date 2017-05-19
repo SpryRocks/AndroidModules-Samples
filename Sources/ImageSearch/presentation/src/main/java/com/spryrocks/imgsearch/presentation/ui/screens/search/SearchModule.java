@@ -9,10 +9,10 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-class SearchUiModule {
+class SearchModule {
     private final Context context;
 
-    SearchUiModule(Context context) {
+    SearchModule(Context context) {
         this.context = context;
     }
 
