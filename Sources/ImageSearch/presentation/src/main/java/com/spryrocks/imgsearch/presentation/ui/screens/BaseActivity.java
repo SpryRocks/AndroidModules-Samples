@@ -1,17 +1,25 @@
 package com.spryrocks.imgsearch.presentation.ui.screens;
 
 import android.annotation.SuppressLint;
+import android.os.Bundle;
 
+import com.spryrocks.imgsearch.presentation.ui.UiComponent;
 import com.spryrocks.imgsearch.presentation.ui.utils.AlertDialogHelper;
-import com.spryrocks.imgsearch.presentation.ui.utils.AlertDialogHelper_;
+
+import javax.inject.Inject;
 
 @SuppressLint("Registered")
 public class BaseActivity extends com.spryrocks.android.modules.ui.BaseActivity {
-    protected final AlertDialogHelper alertDialogHelper;
+    @Inject
+    AlertDialogHelper alertDialogHelper;
 
-    public BaseActivity() {
-        alertDialogHelper = AlertDialogHelper_.getInstance_(this); // TODO: 17.05.2017 use DI
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        UiComponent.create(this).inject(this);
+
         registerLifecycleListener(alertDialogHelper);
+
+        super.onCreate(savedInstanceState);
     }
 
     public void handleError(Throwable error) {

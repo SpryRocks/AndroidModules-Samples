@@ -10,14 +10,13 @@ import com.spryrocks.imgsearch.presentation.R;
 
 import org.androidannotations.annotations.EBean;
 
-@EBean
 public class AlertDialogHelper extends LifecycleListener {
     // TODO: 17.05.2017 move to modules lib
     private final Context context;
 
     private AlertDialog dialog;
 
-    AlertDialogHelper(Context context) {
+    public AlertDialogHelper(Context context) {
         this.context = context;
     }
 
