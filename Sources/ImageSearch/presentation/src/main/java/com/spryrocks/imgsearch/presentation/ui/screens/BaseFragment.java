@@ -6,7 +6,7 @@ public class BaseFragment extends com.spryrocks.android.modules.ui.BaseFragment 
     protected final PresenterCollection presenterCollection;
 
     public BaseFragment() {
-        registerListener(presenterCollection = new PresenterCollection());
+        registerLifecycleListener(presenterCollection = new PresenterCollection());
     }
 
     public void showError(Exception error) {
