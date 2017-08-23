@@ -5,6 +5,8 @@ import com.spryrocks.imgsearch.domain.interactors.ISearchInteractor;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
 class SearchPresenter extends PresenterBase<ISearchView> implements ISearchPresenter {
@@ -18,14 +20,14 @@ class SearchPresenter extends PresenterBase<ISearchView> implements ISearchPrese
 
     @Override
     public void search() {
-        String searchQuery = getView().getSearchQuery();
-
-        searchInteractor.searchImages(searchQuery)
-                .doOnSubscribe(compositeDisposable::add)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(getView()::showImages,
-                        getView()::handleError);
+//        String searchQuery = view.getSearchQuery();
+//
+//        searchInteractor.searchImages(searchQuery)
+//                .doOnSubscribe(compositeDisposable::add)
+//                .subscribeOn(Schedulers.io())
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(view::showImages,
+//                        view::handleError);
     }
 
     @Override
