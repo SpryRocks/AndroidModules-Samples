@@ -4,8 +4,8 @@
     <data>
 
         <variable
-            name="images"
-            type="com.spryrocks.imgsearch.presentation.mvvm.presentation.ui.screens.core.model.Image" />
+            name="model"
+            type="com.spryrocks.imgsearch.presentation.mvvm.presentation.ui.screens.core.SearchModel" />
     </data>
 
     <LinearLayout
@@ -20,8 +20,14 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:ems="10"
-            android:hint="@{images.title}"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:text="@={model.text}" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Search"
+            android:onClick="@{model.searchClickCommand}"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerView"
