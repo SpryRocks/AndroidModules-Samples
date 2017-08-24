@@ -4,6 +4,7 @@ import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +28,8 @@ public class SearchFragment extends Fragment {
                              Bundle savedInstanceState) {
         FragmentSearchBinding binding = FragmentSearchBinding.inflate(inflater);
         binding.setModel(viewModel.model);
+
+        binding.recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 3, GridLayoutManager.VERTICAL, false));
 
         return binding.getRoot();
     }

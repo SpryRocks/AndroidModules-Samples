@@ -2,9 +2,12 @@ package com.spryrocks.imgsearch.presentation.mvvm.presentation.ui.screens.core;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
-import android.arch.lifecycle.ViewModel;
 
+import com.spryrocks.imgsearch.data.models.Image;
 import com.spryrocks.imgsearch.domain.interactors.ISearchInteractor;
+
+import java.util.ArrayList;
+import java.util.Collection;
 
 import javax.inject.Inject;
 
@@ -34,12 +37,14 @@ public class SearchViewModel extends AndroidViewModel {
                 .doOnSubscribe(compositeDisposable::add)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(images -> {
-                    //noinspection Convert2MethodRef,ResultOfMethodCallIgnored
-                    images.toString();
-                }, throwable -> {
-                    //noinspection Convert2MethodRef
-                    throwable.printStackTrace();
-                });
+                .subscribe(this::setImages, this::handleError);
+    }
+
+    private void setImages(Collection<Image> images) {
+        model.images.set(new ArrayList<>(images));
+    }
+
+    private void handleError(Throwable throwable) {
+        throwable.printStackTrace();
     }
 }
