@@ -1,4 +1,4 @@
-package com.spryrocks.imgsearch.presentation.mvvm.presentation.ui.screens.core;
+package com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core;
 
 import android.content.Context;
 

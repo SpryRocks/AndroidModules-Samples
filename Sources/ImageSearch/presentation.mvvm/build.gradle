@@ -39,6 +39,8 @@ dependencies {
     implementation project(':data')
     implementation project(':domain')
 
+    implementation project(':android.modules.ui')
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'

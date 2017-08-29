@@ -1,4 +1,4 @@
-package com.spryrocks.imgsearch.presentation.mvvm.presentation.ui.utils.mvvm;
+package com.spryrocks.imgsearch.presentation.mvvm.ui.utils.mvvm;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;

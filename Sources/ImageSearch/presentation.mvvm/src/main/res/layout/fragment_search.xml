@@ -4,9 +4,11 @@
 
     <data>
 
-        <variable
-            name="model"
-            type="com.spryrocks.imgsearch.presentation.mvvm.presentation.ui.screens.core.SearchModel" />
+        <import type="com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core.SearchModel" />
+        <import type="com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core.SearchViewModel" />
+
+        <variable name="model" type="SearchModel" />
+        <variable name="viewModel" type="SearchViewModel" />
     </data>
 
     <LinearLayout

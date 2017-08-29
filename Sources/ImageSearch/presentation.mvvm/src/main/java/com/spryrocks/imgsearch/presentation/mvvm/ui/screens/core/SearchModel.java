@@ -1,8 +1,8 @@
-package com.spryrocks.imgsearch.presentation.mvvm.presentation.ui.screens.core;
+package com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core;
 
 import com.spryrocks.imgsearch.data.models.Image;
-import com.spryrocks.imgsearch.presentation.mvvm.presentation.ui.utils.mvvm.ObservableField;
-import com.spryrocks.imgsearch.presentation.mvvm.presentation.ui.utils.mvvm.OnClickCommand;
+import com.spryrocks.imgsearch.presentation.mvvm.ui.utils.mvvm.ObservableField;
+import com.spryrocks.imgsearch.presentation.mvvm.ui.utils.mvvm.OnClickCommand;
 
 import java.util.Collection;
 

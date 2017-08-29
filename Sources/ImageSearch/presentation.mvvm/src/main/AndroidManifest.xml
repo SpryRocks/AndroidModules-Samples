@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name="com.spryrocks.imgsearch.presentation.mvvm.presentation.ui.screens.core.MainActivity_">
+        <activity android:name="com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core.MainActivity_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

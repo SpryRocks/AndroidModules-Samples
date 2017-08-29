@@ -1,10 +1,10 @@
-package com.spryrocks.imgsearch.presentation.mvvm.presentation.ui.screens.core;
+package com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core;
 
 import android.app.Application;
-import android.arch.lifecycle.AndroidViewModel;
 
 import com.spryrocks.imgsearch.data.models.Image;
 import com.spryrocks.imgsearch.domain.interactors.ISearchInteractor;
+import com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core.services.alert.IAlertService;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -15,7 +15,7 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
 import io.reactivex.schedulers.Schedulers;
 
-public class SearchViewModel extends AndroidViewModel {
+public class SearchViewModel extends BaseViewModel {
     final SearchModel model = new SearchModel();
     private final CompositeDisposable compositeDisposable;
 
@@ -23,7 +23,7 @@ public class SearchViewModel extends AndroidViewModel {
     ISearchInteractor searchInteractor;
 
     public SearchViewModel(Application application) {
-        super(application);
+        super(application, new SearchViewModel(application));
         SearchComponent.create(application).inject(this);
         this.compositeDisposable = new CompositeDisposable();
 
@@ -46,5 +46,6 @@ public class SearchViewModel extends AndroidViewModel {
 
     private void handleError(Throwable throwable) {
         throwable.printStackTrace();
+        useService(IAlertService.class, service -> service.showMessage("Error", throwable.getMessage()));
     }
 }
