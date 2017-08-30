@@ -4,15 +4,21 @@
 
     <data>
 
-        <import type="com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core.SearchModel" />
-        <import type="com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core.SearchViewModel" />
+        <import type="com.spryrocks.imgsearch.presentation.mvvm.ui.screens.search.SearchModel" />
 
-        <variable name="model" type="SearchModel" />
-        <variable name="viewModel" type="SearchViewModel" />
+        <import type="com.spryrocks.imgsearch.presentation.mvvm.ui.screens.search.SearchViewModel" />
+
+        <variable
+            name="model"
+            type="com.spryrocks.imgsearch.presentation.mvvm.ui.screens.search.SearchModel" />
+
+        <variable
+            name="viewModel"
+            type="com.spryrocks.imgsearch.presentation.mvvm.ui.screens.search.SearchViewModel" />
     </data>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
@@ -27,11 +33,11 @@
             android:inputType="textPersonName"
             android:text="@={model.text}" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="@{model.searchClickCommand}"
-            android:text="@string/Search" />
+        <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:onClick="@{model.searchClickCommand}"-->
+        <!--android:text="@string/Search" />-->
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recyclerView"

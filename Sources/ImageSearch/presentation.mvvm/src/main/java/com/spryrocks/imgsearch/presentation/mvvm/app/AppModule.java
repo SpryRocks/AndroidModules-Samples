@@ -1,4 +1,4 @@
-package com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core;
+package com.spryrocks.imgsearch.presentation.mvvm.app;
 
 import android.content.Context;
 
@@ -9,10 +9,10 @@ import dagger.Module;
 import dagger.Provides;
 
 @Module
-class AppModule {
+public class AppModule {
     private final Context context;
 
-    AppModule(Context context) {
+    public AppModule(Context context) {
         this.context = context;
     }
 
@@ -21,5 +21,10 @@ class AppModule {
         String key = context.getString(R.string.Config_GoogleCustomSearchApi_Key);
         String cx = context.getString(R.string.Config_GoogleCustomSearchApi_Cx);
         return new CustomSearchServiceConfiguration(key, cx);
+    }
+
+    @Provides
+    Context provideContext() {
+        return context;
     }
 }

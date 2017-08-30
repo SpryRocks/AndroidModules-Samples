@@ -1,4 +1,4 @@
-package com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core.services.alert;
+package com.spryrocks.imgsearch.presentation.mvvm.services.alert;
 
 import com.spryrocks.imgsearch.presentation.mvvm.ui.utils.mvvm.connectedServises.core.IConnectedService;
 

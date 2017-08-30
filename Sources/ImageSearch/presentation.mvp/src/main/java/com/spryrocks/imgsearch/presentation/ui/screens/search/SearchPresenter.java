@@ -20,14 +20,16 @@ class SearchPresenter extends PresenterBase<ISearchView> implements ISearchPrese
 
     @Override
     public void search() {
-//        String searchQuery = view.getSearchQuery();
-//
-//        searchInteractor.searchImages(searchQuery)
-//                .doOnSubscribe(compositeDisposable::add)
-//                .subscribeOn(Schedulers.io())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribe(view::showImages,
-//                        view::handleError);
+        ISearchView view = getView();
+
+        String searchQuery = view.getSearchQuery();
+
+        searchInteractor.searchImages(searchQuery)
+                .doOnSubscribe(compositeDisposable::add)
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(view::showImages,
+                        view::handleError);
     }
 
     @Override

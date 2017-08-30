@@ -1,10 +1,12 @@
-package com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core;
+package com.spryrocks.imgsearch.presentation.mvvm.ui.screens;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.presentationmvvm.R;
+import com.spryrocks.imgsearch.presentation.mvvm.ui.screens.search.SearchFragment;
+import com.spryrocks.imgsearch.presentation.mvvm.ui.screens.search.SearchFragment_;
 
 import org.androidannotations.annotations.EActivity;
 

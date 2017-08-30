@@ -1,9 +1,10 @@
-package com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core;
+package com.spryrocks.imgsearch.presentation.mvvm.ui.screens.search;
 
 import android.content.Context;
 
 import com.spryrocks.imgsearch.data.api.google.ApiModule;
 import com.spryrocks.imgsearch.domain.interactors.InteractorsModule;
+import com.spryrocks.imgsearch.presentation.mvvm.app.AppModule;
 
 import dagger.Component;
 
@@ -13,7 +14,6 @@ public interface SearchComponent {
 
     static SearchComponent create(Context context) {
         return DaggerSearchComponent.builder()
-//                .searchModule(new SearchModule(context))
                 .appModule(new AppModule(context))
                 .build();
     }

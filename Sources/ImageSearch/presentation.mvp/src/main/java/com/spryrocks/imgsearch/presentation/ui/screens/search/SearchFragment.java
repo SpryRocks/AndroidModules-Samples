@@ -56,7 +56,7 @@ public class SearchFragment extends BaseFragment implements ISearchView {
 
     @OptionsItem(R.id.search_menuItem)
     protected void search_menuItem_click() {
-        presenter.search();
+         presenter.search();
     }
 
     @Override

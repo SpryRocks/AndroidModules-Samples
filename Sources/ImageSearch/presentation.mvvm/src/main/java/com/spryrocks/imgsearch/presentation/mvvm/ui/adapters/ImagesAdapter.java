@@ -1,4 +1,4 @@
-package com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core.adapters;
+package com.spryrocks.imgsearch.presentation.mvvm.ui.adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

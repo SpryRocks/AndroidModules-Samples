@@ -7,7 +7,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.spryrocks.imgsearch.data.models.Image;
-import com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core.adapters.ImagesAdapter;
+import com.spryrocks.imgsearch.presentation.mvvm.ui.adapters.ImagesAdapter;
 
 import java.io.File;
 import java.util.ArrayList;

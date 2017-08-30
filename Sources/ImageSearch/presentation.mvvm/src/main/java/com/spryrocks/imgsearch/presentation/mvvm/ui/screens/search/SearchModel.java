@@ -1,4 +1,4 @@
-package com.spryrocks.imgsearch.presentation.mvvm.ui.screens.core;
+package com.spryrocks.imgsearch.presentation.mvvm.ui.screens.search;
 
 import com.spryrocks.imgsearch.data.models.Image;
 import com.spryrocks.imgsearch.presentation.mvvm.ui.utils.mvvm.ObservableField;
