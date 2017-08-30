@@ -9,14 +9,17 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.presentationmvvm"
+        applicationId "com.spryrocks.imgsearch"
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["resourcePackageName": "com.spryrocks.imgsearch.presentation"]
+            }
+        }
     }
     buildTypes {
         release {
@@ -38,6 +41,7 @@ dependencies {
 
     implementation project(':data')
     implementation project(':domain')
+    implementation project(':presentation')
 
     implementation project(':android.modules.ui')
 

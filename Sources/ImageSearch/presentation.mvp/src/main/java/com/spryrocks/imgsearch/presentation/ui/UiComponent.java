@@ -2,7 +2,7 @@ package com.spryrocks.imgsearch.presentation.ui;
 
 import android.content.Context;
 
-import com.spryrocks.imgsearch.presentation.ui.screens.BaseActivity;
+import com.spryrocks.imgsearch.presentation.ui.screens.core.BaseActivity;
 
 import dagger.Component;
 

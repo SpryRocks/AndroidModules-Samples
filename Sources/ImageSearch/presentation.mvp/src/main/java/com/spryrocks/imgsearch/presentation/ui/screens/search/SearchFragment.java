@@ -7,8 +7,8 @@ import android.widget.EditText;
 
 import com.spryrocks.imgsearch.data.models.Image;
 import com.spryrocks.imgsearch.presentation.R;
-import com.spryrocks.imgsearch.presentation.ui.adapters.ImagesAdapter;
-import com.spryrocks.imgsearch.presentation.ui.screens.BaseFragment;
+import com.spryrocks.imgsearch.presentation.adapters.ImagesAdapter;
+import com.spryrocks.imgsearch.presentation.ui.screens.core.BaseFragment;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;

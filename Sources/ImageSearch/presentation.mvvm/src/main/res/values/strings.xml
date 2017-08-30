@@ -1,7 +1,2 @@
 <resources>
-    <string name="app_name">presentation.mvvm</string>
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="Search">Search</string>
-    <string name="OopsE">Oops!</string>
 </resources>

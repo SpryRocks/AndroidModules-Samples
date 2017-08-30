@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.presentationmvvm">
+    package="com.spryrocks.imgsearch.presentation">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name="com.spryrocks.imgsearch.presentation.mvvm.ui.screens.MainActivity_">
+        <activity android:name=".ui.screens.MainActivity_">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

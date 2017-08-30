@@ -2,29 +2,26 @@ package com.spryrocks.imgsearch.presentation.ui.screens;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 
 import com.spryrocks.imgsearch.presentation.R;
-import com.spryrocks.imgsearch.presentation.ui.screens.core.BaseActivity;
+import com.spryrocks.imgsearch.presentation.ui.screens.search.SearchFragment;
 import com.spryrocks.imgsearch.presentation.ui.screens.search.SearchFragment_;
 
 import org.androidannotations.annotations.EActivity;
 
 @SuppressLint("Registered")
 @EActivity(R.layout.activity_main)
-public class MainActivity extends BaseActivity {
-
+public class MainActivity extends AppCompatActivity {
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         if (savedInstanceState == null) {
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction()
-                    .replace(R.id.content_view, SearchFragment_.builder().build())
+            SearchFragment fragment = SearchFragment_.builder().build();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.content_view, fragment)
                     .commit();
         }
     }
-
 }
