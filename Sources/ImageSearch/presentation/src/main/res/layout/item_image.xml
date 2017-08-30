@@ -11,5 +11,5 @@
         android:padding="10dp"
         android:scaleType="centerCrop"
         android:cropToPadding="true"
-        tools:ignore="ContentDescription" />
+        tools:ignore="ContentDescription"/>
 </android.support.percent.PercentFrameLayout>

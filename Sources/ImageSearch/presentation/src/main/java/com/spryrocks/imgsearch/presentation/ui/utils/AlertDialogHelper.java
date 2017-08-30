@@ -1,6 +1,6 @@
 package com.spryrocks.imgsearch.presentation.ui.utils;
 
-import android.support.v7.app.AlertDialog;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -8,16 +8,13 @@ import android.content.DialogInterface;
 import com.spryrocks.android.modules.ui.lifecycle.LifecycleListener;
 import com.spryrocks.imgsearch.presentation.R;
 
-import org.androidannotations.annotations.EBean;
-
-@EBean
 public class AlertDialogHelper extends LifecycleListener {
-    // TODO: 17.05.2017 move to modules lib
+
     private final Context context;
 
     private AlertDialog dialog;
 
-    AlertDialogHelper(Context context) {
+    public AlertDialogHelper(Context context) {
         this.context = context;
     }
 

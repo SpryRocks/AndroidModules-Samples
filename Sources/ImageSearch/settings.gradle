@@ -1,1 +1,3 @@
-include ':presentation', ':data', ':domain'
+include ':data', ':domain', ':presentation',
+        ':android.modules.ui', ':android.modules.ui.mvp',
+        ':presentation.mvp', ':presentation.mvvm'

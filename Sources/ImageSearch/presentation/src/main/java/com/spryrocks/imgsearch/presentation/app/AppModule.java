@@ -22,4 +22,9 @@ public class AppModule {
         String cx = context.getString(R.string.Config_GoogleCustomSearchApi_Cx);
         return new CustomSearchServiceConfiguration(key, cx);
     }
+
+    @Provides
+    Context provideContext() {
+        return context;
+    }
 }
