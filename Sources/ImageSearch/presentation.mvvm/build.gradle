@@ -35,7 +35,7 @@ android {
 }
 
 dependencies {
-    final ANDROID_SUPPORT_LIBRARIES_VERSION = '26.0.1'
+    final ANDROID_SUPPORT_LIBRARIES_VERSION = '26.0.2'
     final ANDROID_ARCH_VERSION = '1.0.0-alpha9'
 
     implementation project(':data')
@@ -74,5 +74,5 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.0.0-RC0'
 
     // percent
-    implementation 'com.android.support:percent:26.0.1'
+    implementation 'com.android.support:percent:26.0.2'
 }
