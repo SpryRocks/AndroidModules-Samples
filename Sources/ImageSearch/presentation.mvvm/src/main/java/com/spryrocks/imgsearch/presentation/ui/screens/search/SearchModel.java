@@ -1,8 +1,8 @@
 package com.spryrocks.imgsearch.presentation.ui.screens.search;
 
+import com.spryrocks.android.modules.ui.mvvm.model.ObservableField;
+import com.spryrocks.android.modules.ui.mvvm.model.OnClickCommand;
 import com.spryrocks.imgsearch.data.models.Image;
-import com.spryrocks.imgsearch.presentation.ui.utils.mvvm.ObservableField;
-import com.spryrocks.imgsearch.presentation.ui.utils.mvvm.OnClickCommand;
 
 import java.util.Collection;
 
