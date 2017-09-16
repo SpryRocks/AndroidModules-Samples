@@ -4,8 +4,8 @@ import android.app.Application;
 
 import com.spryrocks.imgsearch.data.models.Image;
 import com.spryrocks.imgsearch.domain.interactors.ISearchInteractor;
-import com.spryrocks.imgsearch.presentation.ui.screens.core.BaseViewModel;
 import com.spryrocks.imgsearch.presentation.services.alert.IAlertService;
+import com.spryrocks.imgsearch.presentation.ui.screens.core.BaseViewModel;
 
 import java.util.ArrayList;
 import java.util.Collection;

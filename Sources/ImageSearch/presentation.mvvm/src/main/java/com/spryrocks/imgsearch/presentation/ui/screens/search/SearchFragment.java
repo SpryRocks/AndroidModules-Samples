@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.GridLayoutManager;
 
+import com.spryrocks.android.modules.ui.mvvm.connectedServices.ConnectedServicesRegistration;
 import com.spryrocks.imgsearch.presentation.R;
 import com.spryrocks.imgsearch.presentation.databinding.FragmentSearchBinding;
 import com.spryrocks.imgsearch.presentation.services.alert.AlertService;
 import com.spryrocks.imgsearch.presentation.services.alert.IAlertService;
 import com.spryrocks.imgsearch.presentation.ui.screens.core.MvvmFragment;
-import com.spryrocks.imgsearch.presentation.ui.utils.mvvm.connectedServises.core.ConnectedServicesRegistration;
 import com.spryrocks.imgsearch.presentation.ui.utils.AlertDialogHelper;
 
 import org.androidannotations.annotations.EFragment;
@@ -50,6 +50,6 @@ public class SearchFragment extends MvvmFragment<FragmentSearchBinding, SearchVi
 
     @OptionsItem(R.id.search_menuItem)
     protected void search_menuItem_click() {
-        getViewModel().model.searchClickCommand.onClick();
+        getViewModel().getModel().searchClickCommand.onClick();
     }
 }
